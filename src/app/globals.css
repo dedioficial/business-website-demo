@@ -7,17 +7,28 @@
   --foreground: #171717;
 }
 
+html {
+  @apply h-full;
+}
+
+body {
+  @apply text-main;
+  @apply antialiased;
+  @apply h-full;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply text-main-dark;
+  }
 }
 
 @layer utilities {
