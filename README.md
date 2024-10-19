@@ -46,6 +46,22 @@ Make sure you have the following installed:
 
 5. Open your browser and go to [http://localhost:3000](http://localhost:3000) to see the demo.
 
+### Building and Running with Docker
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t business-website-demo .
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   docker run -p 3000:3000 business-website-demo:latest
+   ```
+
+3. Open your browser and go to [http://localhost:3000](http://localhost:3000) to see the demo running in Docker.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
