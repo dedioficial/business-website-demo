@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      width: {
+        fullhd: "1920px",
+      },
+      maxWidth: {
+        fullhd: "1920px",
+      },
       colors: {
         main: "#0F172A",
         "main-dark": "#e4e9f5",
