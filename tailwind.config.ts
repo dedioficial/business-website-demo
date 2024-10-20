@@ -11,8 +11,14 @@ const config: Config = {
       colors: {
         main: "#0F172A",
         "main-dark": "#e4e9f5",
+        primary: "#581C87",
+        secondary: "#FCD34D",
+        "secondary-dark": "#78350F",
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      boxShadow: {
+        button: "0px 4px 4px 0px #00000040",
       },
     },
   },
