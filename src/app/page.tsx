@@ -1,6 +1,7 @@
 import { SectionFeatures } from "./home/SectionFeatures";
 import { SectionHero } from "./home/SectionHero";
 import { SectionPickSun } from "./home/SectionPickSun";
+import { SectionReviews } from "./home/SectionReviews";
 import { SectionServices } from "./home/SectionServices";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <SectionPickSun />
       <SectionServices />
       <SectionFeatures />
+      <SectionReviews />
     </main>
   );
 }

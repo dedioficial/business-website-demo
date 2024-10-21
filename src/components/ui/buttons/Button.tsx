@@ -6,6 +6,7 @@ import arrowSecondaryDark from "@/assets/icons/arrow-secondary-dark.svg";
 import arrowSecondary from "@/assets/icons/arrow-secondary.svg";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  arrowLeft?: boolean;
   children?: ReactNode;
   variant?: "primary" | "primary-outline" | "secondary" | "secondary-outline";
 }
@@ -14,6 +15,7 @@ export const Button = ({
   children,
   className,
   variant,
+  arrowLeft,
   ...props
 }: ButtonProps) => {
   const getVariant = useMemo(() => {
@@ -47,9 +49,12 @@ export const Button = ({
   return (
     <button
       {...props}
-      className={`px-6 py-5 rounded-full ${className} ${getVariant} transition-all font-bold text-2xl leading-none tracking-wide flex items-center`}
+      className={`py-5 rounded-full ${className} ${getVariant} ${
+        children ? "px-6" : "px-5"
+      } transition-all font-bold text-2xl leading-none tracking-wide flex items-center`}
     >
       {children && <span className="px-5">{children}</span>}
+
       <span>
         <Image
           src={getArrow}
@@ -57,7 +62,7 @@ export const Button = ({
           alt=""
           height={14}
           width={14}
-          className="w-[.7em] h-[.7em]"
+          className={`w-[.7em] h-[.7em] ${arrowLeft ? "-scale-x-100" : ""}`}
         />
       </span>
     </button>

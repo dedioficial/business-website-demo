@@ -17,6 +17,7 @@ export const HeroImage = () => {
         width={673}
         height={508}
         className="w-full"
+        priority
       />
     </div>
   );
