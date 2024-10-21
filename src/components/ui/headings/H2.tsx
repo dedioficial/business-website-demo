@@ -8,7 +8,9 @@ export const H2 = ({
   children: ReactNode;
 }) => {
   return (
-    <h2 className={`${className} text-[56px] leading-tight font-extrabold`}>
+    <h2
+      className={`${className} md:text-[56px] text-[32px] leading-tight md:font-extrabold font-bold`}
+    >
       {children}
     </h2>
   );
