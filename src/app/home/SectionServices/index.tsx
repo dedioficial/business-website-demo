@@ -34,7 +34,7 @@ export const SectionServices = () => {
     >
       <div className="relative overflow-visible max-lg:order-2">
         <Image
-          src="/images/pages/home/mobile-desktop.svg"
+          src="/images/pages/home/mobile-screen.svg"
           alt="A mobile screen showing application features."
           width={554}
           height={900}
@@ -57,7 +57,7 @@ export const SectionServices = () => {
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 list-none gap-24">
+        <ul className="grid grid-cols-2 list-none gap-24 max-md:gap-12">
           {servicesList.map((item, i) => (
             <li key={i} className="flex flex-col gap-4">
               <span className="block font-bold text-xl md:text-2xl">

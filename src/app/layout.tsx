@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={"en"}>
-      <body className={`${roboto.className} ${roboto.className} relative`}>
+      <body
+        className={`${roboto.className} ${roboto.className} relative overflow-x-hidden`}
+      >
         <Navbar />
 
         {children}
