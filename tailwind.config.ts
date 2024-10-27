@@ -18,6 +18,7 @@ const config: Config = {
         main: "#0F172A",
         "main-dark": "#e4e9f5",
         primary: "#581C87",
+        "primary-light": "#7E22CE",
         secondary: "#FCD34D",
         "secondary-dark": "#78350F",
         background: "var(--background)",

@@ -9,7 +9,7 @@ export const H2 = ({
 }) => {
   return (
     <h2
-      className={`${className} md:text-[56px] text-[32px] leading-tight md:font-extrabold font-bold`}
+      className={`${className} md:text-[56px] text-[32px] leading-[1.1] md:font-extrabold font-bold`}
     >
       {children}
     </h2>

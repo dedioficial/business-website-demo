@@ -11,7 +11,7 @@ export const ReviewsHeader = () => {
         </PreHeading>
         <H2>Make something awesome</H2>
 
-        <p className="md:text-xl md:leading-9">
+        <p className="md:text-xl md:leading-relaxed">
           Dui euismod iaculis libero, aliquet vitae et elementum porttitor.
           Eleifend mi tristique condimentum congue fusce nunc, donec magnis
           commodo.

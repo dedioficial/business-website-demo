@@ -49,11 +49,11 @@ export const Button = ({
   return (
     <button
       {...props}
-      className={`py-5 rounded-full ${className} ${getVariant} ${
-        children ? "px-6" : "px-5"
+      className={`py-4 rounded-full ${className} ${getVariant} ${
+        children ? "px-6" : "px-4"
       } transition-all font-bold text-2xl leading-none tracking-wide flex items-center`}
     >
-      {children && <span className="px-5">{children}</span>}
+      {children && <span className="px-5 whitespace-nowrap">{children}</span>}
 
       <span>
         <Image
@@ -62,7 +62,9 @@ export const Button = ({
           alt=""
           height={14}
           width={14}
-          className={`w-[.7em] h-[.7em] ${arrowLeft ? "-scale-x-100" : ""}`}
+          className={`w-[.7em] h-[.7em] max-w-none ${
+            arrowLeft ? "-scale-x-100" : ""
+          }`}
         />
       </span>
     </button>
