@@ -1,3 +1,4 @@
+import * as motion from "framer-motion/client";
 import Image from "next/image";
 import { ButtonHTMLAttributes, ReactNode, useMemo } from "react";
 
@@ -9,6 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   arrowLeft?: boolean;
   children?: ReactNode;
   variant?: "primary" | "primary-outline" | "secondary" | "secondary-outline";
+  className?: string;
 }
 
 export const Button = ({
@@ -47,26 +49,43 @@ export const Button = ({
   }, [variant]);
 
   return (
-    <button
-      {...props}
-      className={`py-4 rounded-full ${className} ${getVariant} ${
-        children ? "px-6" : "px-4"
-      } transition-all font-bold text-2xl leading-none tracking-wide flex items-center`}
+    <motion.div
+      initial={{ scale: 0, translateZ: 0 }}
+      whileInView={{ scale: 1, translateZ: 0 }}
+      transition={{
+        type: "spring",
+        duration: 1,
+      }}
+      viewport={{
+        once: true,
+        amount: "all",
+      }}
     >
-      {children && <span className="px-5 whitespace-nowrap">{children}</span>}
+      <button
+        {...props}
+        className={`py-4 rounded-full ${className} ${getVariant} ${
+          children ? "px-6" : "px-4"
+        } font-bold text-2xl transition-all leading-none tracking-wide flex items-center`}
+      >
+        <>
+          {children && (
+            <span className="px-5 whitespace-nowrap">{children}</span>
+          )}
 
-      <span>
-        <Image
-          src={getArrow}
-          aria-hidden
-          alt=""
-          height={14}
-          width={14}
-          className={`w-[.7em] h-[.7em] max-w-none ${
-            arrowLeft ? "-scale-x-100" : ""
-          }`}
-        />
-      </span>
-    </button>
+          <span>
+            <Image
+              src={getArrow}
+              aria-hidden
+              alt=""
+              height={14}
+              width={14}
+              className={`w-[.7em] h-[.7em] max-w-none ${
+                arrowLeft ? "-scale-x-100" : ""
+              }`}
+            />
+          </span>
+        </>
+      </button>
+    </motion.div>
   );
 };

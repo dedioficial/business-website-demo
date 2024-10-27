@@ -1,3 +1,4 @@
+import * as motion from "framer-motion/client";
 import { ReactNode } from "react";
 
 export const H2 = ({
@@ -8,10 +9,25 @@ export const H2 = ({
   children: ReactNode;
 }) => {
   return (
-    <h2
-      className={`${className} md:text-[56px] text-[32px] leading-[1.1] md:font-extrabold font-bold`}
+    <motion.h2
+      className={`${className} md:text-[56px] text-[32px] leading-[1.1] md:font-extrabold font-bold order-2`}
+      initial={{ translateX: "-20px", opacity: 0, translateZ: 0 }}
+      whileInView={{
+        translateX: 0,
+        opacity: 1,
+        translateZ: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.5,
+      }}
+      transition={{
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+      }}
     >
       {children}
-    </h2>
+    </motion.h2>
   );
 };

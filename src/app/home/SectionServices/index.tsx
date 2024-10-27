@@ -1,6 +1,8 @@
 import { Pill } from "@/components/assets/Pill";
 import { H2 } from "@/components/ui/headings/H2";
+import ParagraphHeading from "@/components/ui/headings/ParagraphHeading";
 import { PreHeading } from "@/components/ui/headings/PreHeading";
+import SectionHeadingGroup from "@/components/ui/headings/SectionHeadingGroup";
 import Image from "next/image";
 
 const servicesList = [
@@ -41,20 +43,20 @@ export const SectionServices = () => {
           className="w-auto max-md:max-h-[500px] h-[90vh] max-h-[900px] max-w-none relative z-10 max-lg:translate-x-[10%]"
         />
 
-        <Pill className="absolute w-[200%] -top-[5%] right-[10%] max-lg:right-0" />
+        <Pill motionClassName="absolute w-[200%] -top-[5%] right-[10%] max-lg:right-0" />
       </div>
 
       <div className="flex flex-col gap-24">
         <div className="flex flex-col gap-6 relative z-10">
-          <div className="flex flex-col gap-2">
-            <PreHeading>Services</PreHeading>
+          <SectionHeadingGroup className="gap-2">
             <H2>Personalized Services</H2>
-          </div>
+            <PreHeading>Services</PreHeading>
+          </SectionHeadingGroup>
 
-          <p className="md:text-xl md:leading-9">
+          <ParagraphHeading>
             Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et.
             Auctor turpis semper id sit ornare maecenas lectus sed.
-          </p>
+          </ParagraphHeading>
         </div>
 
         <ul className="grid grid-cols-2 list-none gap-24 max-md:gap-12">

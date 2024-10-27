@@ -1,6 +1,8 @@
 import { Pill } from "@/components/assets/Pill";
 import { H2 } from "@/components/ui/headings/H2";
+import ParagraphHeading from "@/components/ui/headings/ParagraphHeading";
 import { PreHeading } from "@/components/ui/headings/PreHeading";
+import SectionHeadingGroup from "@/components/ui/headings/SectionHeadingGroup";
 import Image from "next/image";
 
 const featuresList = [
@@ -34,15 +36,15 @@ export const SectionFeatures = () => {
     >
       <div className="flex flex-col gap-24">
         <div className="flex flex-col gap-6 relative z-10">
-          <div className="flex flex-col gap-2">
-            <PreHeading>System features</PreHeading>
+          <SectionHeadingGroup className="gap-2">
             <H2>Powerful features</H2>
-          </div>
+            <PreHeading>System features</PreHeading>
+          </SectionHeadingGroup>
 
-          <p className="md:text-xl md:leading-9">
+          <ParagraphHeading>
             Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et.
             Auctor turpis semper id sit ornare maecenas lectus sed.
-          </p>
+          </ParagraphHeading>
         </div>
 
         <ul className="grid grid-cols-2 list-none gap-24 max-md:gap-12">
@@ -67,7 +69,7 @@ export const SectionFeatures = () => {
         />
 
         <Pill
-          className="absolute w-[250%] bottom-[10%] -left-[10%] max-lg:left-0"
+          motionClassName="absolute w-[250%] bottom-[10%] -left-[10%] max-lg:left-0"
           fill="orange"
         />
       </div>
