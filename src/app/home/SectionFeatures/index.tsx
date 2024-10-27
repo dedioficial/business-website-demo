@@ -4,24 +4,29 @@ import ParagraphHeading from "@/components/ui/headings/ParagraphHeading";
 import { PreHeading } from "@/components/ui/headings/PreHeading";
 import SectionHeadingGroup from "@/components/ui/headings/SectionHeadingGroup";
 import Image from "next/image";
+import { LuCloudRain, LuMoon, LuStar, LuSun } from "react-icons/lu";
 
 const featuresList = [
   {
+    icon: <LuSun />,
     title: "Erat sit",
     description:
       "Id quis lectus pharetra, ultricies integer montes, amet, gravida consectetur. Nunc convallis fringilla nisl magna sagittis.",
   },
   {
+    icon: <LuMoon />,
     title: "Ullamcorper arcu",
     description:
       "Ipsum at id hendrerit amet faucibus commodo quam nullam. Lectus auctor habitant duis dictum.",
   },
   {
+    icon: <LuStar />,
     title: "Et pellentesque",
     description:
       "Mi vitae, massa eu molestie massa euismod volutpat condimentum. Blandit molestie ullamcorper hendrerit purus lorem vulputate.",
   },
   {
+    icon: <LuCloudRain />,
     title: "Amet egestas",
     description:
       "Elementum, libero, lacus, vel ullamcorper at velit id. Malesuada velit et, ullamcorper malesuada amet, felis.",
@@ -47,9 +52,10 @@ export const SectionFeatures = () => {
           </ParagraphHeading>
         </div>
 
-        <ul className="grid grid-cols-2 list-none gap-24 max-md:gap-12">
+        <ul className="grid grid-cols-2 list-none gap-12">
           {featuresList.map((item, i) => (
-            <li key={i} className="flex flex-col gap-4">
+            <li key={i} className="flex flex-col gap-4 max-md:items-center">
+              <span className="text-secondary text-5xl">{item.icon}</span>
               <span className="block font-bold text-xl md:text-2xl">
                 {item.title}
               </span>

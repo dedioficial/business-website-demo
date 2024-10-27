@@ -4,24 +4,29 @@ import ParagraphHeading from "@/components/ui/headings/ParagraphHeading";
 import { PreHeading } from "@/components/ui/headings/PreHeading";
 import SectionHeadingGroup from "@/components/ui/headings/SectionHeadingGroup";
 import Image from "next/image";
+import { LuCircle, LuSquare, LuTriangle, LuX } from "react-icons/lu";
 
 const servicesList = [
   {
+    icon: <LuCircle />,
     title: "Et mauris",
     description:
       "Posuere quis sed mauris non curabitur pretium elementum eget. Feugiat sed maecenas eu accumsan tristique.",
   },
   {
+    icon: <LuTriangle />,
     title: "Eget sit",
     description:
       "Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa. ",
   },
   {
+    icon: <LuX />,
     title: "Imperdiet pellentesque",
     description:
       "Platea arcu dapibus non magna cursus lectus id sollicitudin. Enim viverra parturient tristique nulla.",
   },
   {
+    icon: <LuSquare />,
     title: "Non libero",
     description:
       "Congue mauris sem vel, urna viverra. Urna, nibh leo suscipit purus ut sed eros, consectetur viverra.",
@@ -59,9 +64,11 @@ export const SectionServices = () => {
           </ParagraphHeading>
         </div>
 
-        <ul className="grid grid-cols-2 list-none gap-24 max-md:gap-12">
+        <ul className="grid grid-cols-2 list-none gap-12 max-md:gap-12">
           {servicesList.map((item, i) => (
-            <li key={i} className="flex flex-col gap-4">
+            <li key={i} className="flex flex-col gap-4 max-md:items-center">
+              <span className="text-secondary text-5xl">{item.icon}</span>
+
               <span className="block font-bold text-xl md:text-2xl">
                 {item.title}
               </span>
