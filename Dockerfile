@@ -13,6 +13,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+COPY next.config.docker.mjs ./next.config.mjs
+
 RUN npm run build
 
 FROM base AS runner
