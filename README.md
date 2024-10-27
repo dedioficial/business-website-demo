@@ -4,9 +4,14 @@ This is a demo website for a business, containing a basic Home page. The site is
 
 ## Technologies Used
 
-- **Next.js** - A React framework for server-side rendering and static site generation.
+- **Next.js** - A React framework for server-side rendering and static site generation, to improve SEO.
 - **TypeScript** - A strongly typed programming language that builds on JavaScript.
 - **Tailwind CSS** - A utility-first CSS framework for rapidly building custom designs.
+- **Framer-Motion** - A production-ready motion library for React to create animations.
+
+## Live Demo
+
+The live demo can be [checked here](https://business-website-demo.mathandrade.com/).
 
 ## Getting Started
 
