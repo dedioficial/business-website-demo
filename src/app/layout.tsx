@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
@@ -26,6 +27,8 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+
+        <Footer />
       </body>
     </html>
   );
